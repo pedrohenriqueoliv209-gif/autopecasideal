@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+
+    <!-- FONTES -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --cor-principal: #e60000;
+            --cor-fundo: #0d0d0d;
+            --cor-card: #141414;
+            --cor-texto: #ffffff;
+        }
+
+        .tema-claro {
+            --cor-fundo: #ffffff;
+            --cor-card: #f2f2f2;
+            --cor-texto: #000000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--cor-fundo);
+            color: var(--cor-texto);
+            transition: 0.3s;
+        }
+
+        header {
+            background: #000;
+            border-bottom: 4px solid var(--cor-principal);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-family: 'Poppins';
+            color: var(--cor-principal);
+        }
+
+        .tema-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 8px 12px;
+            background: var(--cor-principal);
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        main {
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .card {
+            background: var(--cor-card);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #2a2a2a;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #000;
+            border-top: 1px solid #222;
+            color: #aaa;
+        }
+
+        /* RESPONSIVO */
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>TÍTULO</h1>
+    <button class="tema-btn" onclick="trocarTema()">Tema</button>
+</header>
+
+<main>
+    <div class="container">
+
+        <div class="card">
+            <!-- CONTEÚDO AQUI -->
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Seu Site</p>
+</footer>
+
+<script>
+    function trocarTema() {
+        document.body.classList.toggle("tema-claro");
+    }
+</script>
+
+</body>
+</html>
