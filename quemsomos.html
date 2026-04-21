@@ -1,26 +1,175 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <title>QUEM SOMOS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Somos - Ideal Autopeças</title>
+
+    <!-- FONTES -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --cor-principal: #e60000;
+            --cor-fundo: #0d0d0d;
+            --cor-card: #141414;
+            --cor-texto: #ffffff;
+        }
+
+        .tema-claro {
+            --cor-fundo: #ffffff;
+            --cor-card: #f2f2f2;
+            --cor-texto: #000000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            transition: 0.3s;
+        }
+
+        header {
+            background-color: #000;
+            border-bottom: 4px solid var(--cor-principal);
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        header h2 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--cor-principal);
+            font-size: 28px;
+        }
+
+        .tema-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 8px 12px;
+            background: var(--cor-principal);
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-family: 'Poppins';
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            padding: 50px 20px;
+        }
+
+        .card {
+            max-width: 700px;
+            background: var(--cor-card);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+
+        .card p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .voltar {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 18px;
+            background: var(--cor-principal);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .voltar:hover {
+            background: #ff1a1a;
+            transform: translateY(-2px);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+            border-top: 1px solid #222;
+            font-size: 13px;
+            color: #aaa;
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 600px) {
+
+            header h2 {
+                font-size: 22px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .card p {
+                font-size: 15px;
+            }
+
+            .tema-btn {
+                padding: 6px 10px;
+                font-size: 12px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <header>
-        <h2>QUEM SOMOS??</h2>
-    </header>
-    <main>
-        
-         <h3><p>
-            Ideal Auto Peças é uma loja de peças automotivas localizada em Carapicuíba, São Paulo, com atuação desde 2021.  A empresa oferece peças para carros e motos, acessórios e atendimento personalizado, com foco em qualidade e variedade de produtos.
-        </p></h3>  <a href="index.html">retornar</a>
-        <img src="foto2.jpeg" alt="loja" width="1300">
-    </main>
-    <footer>
-    </footer>
+
+<header>
+    <h2>QUEM SOMOS</h2>
+    <button class="tema-btn" onclick="trocarTema()">Tema</button>
+</header>
+
+<main>
+    <div class="card">
+
+        <p>
+            Ideal Auto Peças é uma loja de peças automotivas localizada em Carapicuíba, São Paulo, com atuação desde 2021. 
+            A empresa oferece peças para carros e motos, acessórios e atendimento personalizado, com foco em qualidade e variedade de produtos.
+        </p>
+
+        <a class="voltar" href="index.html">← Voltar</a>
+
+        <img src="foto2.jpeg" alt="loja">
+
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Ideal Autopeças. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    function trocarTema() {
+        document.body.classList.toggle("tema-claro");
+    }
+</script>
+
 </body>
-
-
-
-
-
 </html>
